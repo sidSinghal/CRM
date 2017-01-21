@@ -1,6 +1,6 @@
-## Project Details
+# Project Details
 
-# Project Design Document
+## Project Design Document
 
 ###Team Members
 Sno. | Name | Email
