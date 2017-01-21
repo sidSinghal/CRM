@@ -1,37 +1,32 @@
 ## Project Details
 
-You can use the [editor on GitHub](https://github.com/el9sid/neu-csye6225-4/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Project Design Document
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+###Team Members
+Sno. | Name | Email
+---- | ------------ | -------------
+1    | Siddhant Singhal      | singhal.si@husky.neu.edu
+2    | Karthik Chandrashekar | chandrashekar.k@husky.neu.edu
+3    | Sneha Malshetti       | malshetti.s@husky.neu.edu
+4    | Raseswari Das         | das.r@husky.neu.edu
 
-### Markdown
+###Objective
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#####Our Project would cover certain aspects of the CRM functionalities under the Order to Cash Process. We would only be looking into the Sales side of the functionality (Leads, Accounts, Opportunities, Contacts, Sales Users and Administrators). This type of WebApplication is used in every industry to accommodate the sales to billing aspect of the company. We can use examples such as SIEBEL which is a legacy system now and Salesforce which is comparatively a newer platform.
 
-```markdown
-Syntax highlighted code block
+###Functionalities
+1. Login
+2. Logout
+3. User management
+4. Accounts management
+5. Contacts Management
+6. Leads Management
+7. Opportunity Management
+8. Sales Users and Administrator Management
+9. Products
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/el9sid/neu-csye6225-4/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+###Tools and Languages
+1. Front end development (HTML, CSS and JavaScript)
+2. Database (Oracle and MongoDB)
+3. Back end development (Java/Python)
+4. Data exchange using JSON and AJAX
