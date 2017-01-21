@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Project Details
 
 You can use the [editor on GitHub](https://github.com/el9sid/neu-csye6225-4/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
