@@ -1,4 +1,5 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn test -B
+  install: cd CloudProject;mvn install -DskipTests=true;cd ..
+script: cd CloudProject && mvn test
