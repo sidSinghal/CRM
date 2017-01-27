@@ -77,3 +77,20 @@
 2017-01-26 22:53:34,965 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-01-26 22:53:34,997 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\main\resources
 2017-01-26 22:53:35,001 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 22:53:35,002 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\test\resources
+2017-01-26 23:10:48,969 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject
+2017-01-26 23:10:48,969 [Worker-7] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-01-26 23:11:02,997 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:11:03,060 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\main\resources
+2017-01-26 23:11:03,107 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:11:03,107 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\test\resources
+2017-01-26 23:13:24,440 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:13:24,444 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\main\resources
+2017-01-26 23:13:24,448 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:13:24,448 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\test\resources
+2017-01-26 23:13:39,361 [Worker-1] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject
+2017-01-26 23:13:39,361 [Worker-1] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-01-26 23:13:49,695 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:13:49,695 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\main\resources
+2017-01-26 23:13:49,711 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-26 23:13:49,711 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\dell\CloudProject\neu-csye6225-4\CloudProject\src\test\resources
