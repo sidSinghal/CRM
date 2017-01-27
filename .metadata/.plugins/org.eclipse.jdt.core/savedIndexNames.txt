@@ -12,7 +12,6 @@ INDEX VERSION 1.129+C:\Users\dell\CloudProject\neu-csye6225-4\.metadata\.plugins
 2221491804.index
 1525087677.index
 449440424.index
-845998301.index
 91472061.index
 3314433690.index
 1199826107.index
