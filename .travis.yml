@@ -1,6 +1,6 @@
 language: java
 
-  install: cd CloudProject;mvn install -DskipTests=true;cd ..
+install: cd CloudProject;mvn install -DskipTests=true;cd ..
 script: cd CloudProject && mvn test
 
 jdk:
