@@ -71,3 +71,17 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 7.	Created Lead Page
 8.	Created Users Page
 
+IAM Alias
+
+###https://neu-csye6225-spring2017-team-2.signin.aws.amazon.com/console
+
+###Shell Script
+
+
+#####Create Instance
+
+aws ec2 run-instances --image-id ami-5ac2cd4d --count 1 --instance-type t2.micro --subnet-id subnet-db46c9e7 --associate-public-ip-address --enable-api-termination
+
+#####Root Volume and Type
+
+aws ec2 run-instances --image-id ami-5ac2cd4d --block-device-mappings '[{"DeviceName":"/dev/sdb","Ebs":{"VolumeSize":10,"DeleteOnTermination":true,"VolumeType":"standard"}}]'
