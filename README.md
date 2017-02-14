@@ -37,6 +37,8 @@ Sno. | Name | Email
 3. Mongo DB.
 4. STS.
 5. AWS For hosting.
+6. Apache Tomcat v 8.0 JDK 1.8.
+7. JDBC connector.
 
 ###Authentication/Login Test Cases.
 #####Functionality
