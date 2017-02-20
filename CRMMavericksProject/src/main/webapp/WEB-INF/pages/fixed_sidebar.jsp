@@ -52,27 +52,27 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home </a>
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-
+                      
                     </ul>
                   </li>
-                  <li><a> Navigate <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Navigate <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Lead_View.html">Lead</a></li>
-                      <li><a href="Contact_Form.html">Contact</a></li> 
-                       <li><a href="Oppurtunity_View.html">Opportunity</a></li>                    
-                      <li><a href="Accounts_View.html">Accounts</a></li>                      
-                      <li><a href="Products_View.html">Products</a></li>
-                      <li><a href="User_View.html">User</a></li>
+                      <li><a href="Lead_View.jsp">Lead</a></li>
+                      <li><a href="Contact_Form.jsp">Contact</a></li> 
+                      <li><a href="Oppurtunity_View.jsp">Opportunity</a></li>
+                      <li><a href="Accounts_View.jsp">Accounts</a></li>            
+                      <li><a href="Products_View.jsp">Products</a></li>
+                      <li><a href="User_View.jsp">User</a></li>
                     </ul>
+                  </li>
+
                 </ul>
               </div>
 
-					<!-- /sidebar menu -->
-					
-					
-            <!-- /menu footer buttons -->
+            </div>
+            <!-- /sidebar menu -->
           </div>
         </div>
 
@@ -85,33 +85,23 @@
               </div>
 
               <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-
-        <!-- /top navigation -->
+                
+                <li><a href="javascript:;">Help</a></li>
+                <li><a href="login.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- /top navigation -->
 
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
+                <h3>Fixed Sidebar <small> This is the common page <strong>menu_fixed</strong></small></h3>
               </div>
             </div>
           </div>
@@ -119,8 +109,10 @@
         <!-- /page content -->
 
         <!-- footer content -->
-       
-        <!-- /footer content -->
+    <footer>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
       </div>
     </div>
 

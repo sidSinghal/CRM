@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Namaste! | </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,22 +57,18 @@
                   </li>
                   <li><a> Navigate <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Lead_View.html">Lead</a></li>
-                      <li><a href="Contact_Form.html">Contact</a></li> 
-                       <li><a href="Oppurtunity_View.html">Opportunity</a></li>                    
-                      <li><a href="Accounts_View.html">Accounts</a></li>                      
-                      <li><a href="Products_View.html">Products</a></li>
-                      <li><a href="User_View.html">User</a></li>
+                      <li><a href="Lead_View.jsp">Lead</a></li>
+                      <li><a href="Contact_Form.jsp">Contact</a></li> 
+                       <li><a href="Oppurtunity_View.jsp">Opportunity</a></li>                    
+                      <li><a href="Accounts_View.jsp">Accounts</a></li>                      
+                      <li><a href="Products_View.jsp">Products</a></li>
+                      <li><a href="User_View.jsp">User</a></li>
                     </ul>
+                    </li>
                 </ul>
               </div>
-
               </div>
-
-            </div>
             <!-- /sidebar menu -->
-
-
           </div>
         </div>
 
@@ -89,17 +83,7 @@
               <ul class="nav navbar-nav navbar-right">
                 
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                   
-
+                    <li><a href="login.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>
@@ -134,7 +118,7 @@
               <div class="col-md-10 col-sm-10 col-xs-50">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Accounts </h2>
+                    <h2>Account View Tables </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -170,7 +154,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                     
-                          <a class="btn btn-primary" href="Accounts_Form.html">New Form</a>
+                          <a class="btn btn-primary" href="Accounts_Form.jsp">New Form</a>
                         
                 </div>
               </div>
@@ -185,9 +169,6 @@
 
               <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->

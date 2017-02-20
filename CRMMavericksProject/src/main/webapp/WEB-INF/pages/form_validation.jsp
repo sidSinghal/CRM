@@ -59,12 +59,12 @@
                   </li>
                   <li><a> Navigate <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Lead_View.html">Lead</a></li>
-                      <li><a href="Contact_Form.html">Contact</a></li> 
-                       <li><a href="Oppurtunity_View.html">Opportunity</a></li>                    
-                      <li><a href="Accounts_View.html">Accounts</a></li>                      
-                      <li><a href="Products_View.html">Products</a></li>
-                      <li><a href="User_View.html">User</a></li>
+                      <li><a href="Lead_View.jsp">Lead</a></li>
+                      <li><a href="Contact_Form.jsp">Contact</a></li> 
+                      <li><a href="Oppurtunity_View.jsp">Opportunity</a></li>                    
+                      <li><a href="Accounts_View.jsp">Accounts</a></li>                      
+                      <li><a href="Products_View.jsp">Products</a></li>
+                      <li><a href="User_View.jsp">User</a></li>
                     </ul>
                 </ul>
               </div>

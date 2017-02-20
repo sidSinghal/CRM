@@ -15,7 +15,9 @@
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    
+    <!-- iCheck -->
+   <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
@@ -33,9 +35,9 @@
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                
-              </div>
+              <!-- <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div> -->
               <div class="profile_info">
                 <span>Welcome,</span>
                 <h2>User</h2>
@@ -69,8 +71,7 @@
               </div>
             </div>
             <!-- /sidebar menu -->
-            
-          </div>
+            </div>
         </div>
 
         <!-- top navigation -->
@@ -98,7 +99,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Oppurtunity Details </h3>
+                <h3>Lead Details </h3>
               </div>
 
               <div class="title_right">
@@ -119,7 +120,7 @@
               <div class="col-md-10 col-sm-10 col-xs-50">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Oppurtunity View Tables </h2>
+                    <h2>Lead View Tables </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -143,24 +144,30 @@
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>Oppurtunity Name</th>
-                          <th>Oppurtunity ID</th>
-                          <th>Account Name</th>
-                          <th>Account Number</th>
-                          <th>Oppurtunity Stage</th>
-                          <th>Projected Close Date</th>
-                          <th>Projected amount of Revenue</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>ID</th>
+                          <th>Website</th>
+                          <th>Occupation</th>
+                          <th>Product</th>
+                          <th>Trial Product</th>
+                          <th>Phone</th>
+                          <th>Status</th>
                         </tr>
                       </thead>
+                      <tbody>
+                        
+                      </tbody>
                     </table>
 
                       <div class="ln_solid"></div>
                       <div class="form-group">
                     
-                          <a class="btn btn-primary" href="Oppurtunity_Form.jsp">New Form</a>
-                     
+                          <a class="btn btn-primary" href="Lead_Form.jsp">New Form</a>
+                         
                 </div>
-                </div>
+              </div>
+
                 </div>
                 </div>
               </div>
