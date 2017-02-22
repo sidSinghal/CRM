@@ -59,15 +59,3 @@ Sno. | Name | Email
 
 ###Link to Travis-CI
 This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2") link.
-
-###Assignment 4:
-
-1.	Count of Sales users and total users are under Home  Dashboard
-2.	Contacts is under Live on Additional Pages
-3.	Created Opportunity Page
-4.	Created Accounts Page
-5.	Created Products Page
-6.	Created Contact Page
-7.	Created Lead Page
-8.	Created Users Page
-9. Added login page
