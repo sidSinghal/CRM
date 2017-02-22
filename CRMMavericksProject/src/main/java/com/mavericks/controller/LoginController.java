@@ -16,7 +16,7 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import com.mavericks.pojo.User;
+
 import com.mavericks.pojo.UserBean;
 
 /**
