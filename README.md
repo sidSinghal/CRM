@@ -71,3 +71,10 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 7.	Created Lead Page
 8.	Created Users Page
 
+###Shell Scripts Updated
+1. setupDbSecurityGroup.sh
+2. setupS3.sh
+3. setupWebSecurityGroup.sh 
+4. launchEC2Instance.sh
+5. launchMysqlRdsInstance.sh
+6. createDynamoTable.sh
