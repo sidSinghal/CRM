@@ -61,15 +61,23 @@ Sno. | Name | Email
 This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2") link.
 
 ###Assignment 4:
-
-1.	Count of Sales users and total users are under Home  Dashboard
+1.	Count of Sales users and total users are under Home Dashboard
 2.	Contacts is under Live on Additional Pages
-3.	Created Opportunity Page
-4.	Created Accounts Page
-5.	Created Products Page
-6.	Created Contact Page
-7.	Created Lead Page
-8.	Created Users Page
+3.	Created Opportunity Form Page
+4.	Created Accounts Form Page
+5.	Created Products Form Page
+6.	Created Contact Form Page
+7.	Created Lead Form Page
+8.  Created Users Form Page
+
+###Assignment 5:
+1.	Created Opportunity View Page
+2.	Created Accounts View Page
+3.	Created Products View Page
+4.	Created Contact View Page
+5.	Created Lead View Page
+6.	Created Users View Page
+7.	Created Login Page
 
 ###Shell Scripts Updated
 1. setupDbSecurityGroup.sh
