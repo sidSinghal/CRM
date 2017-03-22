@@ -2,10 +2,18 @@
 include('db.php');
 ob_start();
 session_start();
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 if(isset($_POST['login']))
 {
-	$email=$_POST['email'];
-	$password=$_POST['password'];
+	$email=test_input($_POST['email']);
+	$password=test_input($_POST['password']);
 	$type1=$_POST['type1'];
 if($type1==4)
 {
@@ -100,7 +108,7 @@ else
 				<option value="">&nbsp;</option>
 				<option value="1">Admin</option>
 				<option value="2">User</option>
-				<option value="4">Client</option>
+<!--				<option value="4">Client</option>-->
 			    </select>
                             <label for="usertype">Type</label>
                         </div>
