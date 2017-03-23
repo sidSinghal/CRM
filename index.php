@@ -3,50 +3,41 @@ include('db.php');
 ob_start();
 session_start();
 
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
 
-if(isset($_POST['login']))
-{
-	$email=test_input($_POST['email']);
-	$password=test_input($_POST['password']);
-	$type1=$_POST['type1'];
-if($type1==4)
-{
+if (isset($_POST['login'])) {
+    $email = test_input($_POST['email']);
+    $password = test_input($_POST['password']);
+    $type1 = $_POST['type1'];
+    if ($type1 == 4) {
 
-        $query1="SELECT * FROM clients WHERE email ='$email' AND password = '$password'";
-        $result1 = mysqli_query($dbc,$query1);
+        $query1 = "SELECT * FROM clients WHERE email ='$email' AND password = '$password'";
+        $result1 = mysqli_query($dbc, $query1);
         $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result1);
-        if($count == 1)
-    	{
-                        header('Location: user_list.php');
-    	}
-        else
-    	{
-                        header('Location: index.php?error=1');
-    	}
-}
-else
-{
-	$query1="SELECT * FROM users WHERE email ='$email' AND password = '$password' AND typeid = '$type1'";
-        $result1 = mysqli_query($dbc,$query1);
+        if ($count == 1) {
+            header('Location: user_list.php');
+        } else {
+            header('Location: index.php?error=1');
+        }
+    } else {
+        $query1 = "SELECT * FROM users WHERE email ='$email' AND password = '$password' AND typeid = '$type1'";
+        $result1 = mysqli_query($dbc, $query1);
         $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result1);
-        if($count == 1)
-    	{
-    		
-                        header('Location: new_user.php');
-    	}
-        else
-    	{
-                        header('Location: index.php?error=1');
-    	}
-}
+        if ($count == 1) {
+
+            header('Location: new_user.php');
+        } else {
+            header('Location: index.php?error=1');
+        }
+    }
 }
 ?>
 
@@ -63,14 +54,15 @@ else
     <!-- END META -->
 
     <!-- BEGIN STYLESHEETS -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet'
+          type='text/css'/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
 
-    <link type="text/css" rel="stylesheet" href="css/materialadmin.css" />
+    <link type="text/css" rel="stylesheet" href="css/materialadmin.css"/>
 
-    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
 
-    <link type="text/css" rel="stylesheet" href="css/material-design-iconic-font.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/material-design-iconic-font.min.css"/>
 
 
     <!-- END STYLESHEETS -->
@@ -82,10 +74,6 @@ else
     <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
 </head>
-
-
-
-
 
 
 <body class="menubar-hoverable header-fixed ">
@@ -105,11 +93,11 @@ else
                     <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
                         <div class="form-group">
                             <select id="type1" name="type1" class="form-control" required>
-				<option value="">&nbsp;</option>
-				<option value="1">Admin</option>
-				<option value="2">User</option>
-<!--				<option value="4">Client</option>-->
-			    </select>
+                                <option value="">&nbsp;</option>
+                                <option value="1">Admin</option>
+                                <option value="2">User</option>
+                                <!--				<option value="4">Client</option>-->
+                            </select>
                             <label for="usertype">Type</label>
                         </div>
                         <div class="form-group">
@@ -123,12 +111,13 @@ else
                         <br/>
                         <div class="row">
                             <div class="col-xs-6 text-right">
-                                <input type="submit" class="btn btn-primary btn-raised" name="login" id="login" style="background-color : #2B323A; border-color : #2B323A;" Value="Login"/>
+                                <input type="submit" class="btn btn-primary btn-raised" name="login" id="login"
+                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Login"/>
                             </div><!--end .col -->
                         </div><!--end .row -->
                     </form>
                 </div><!--end .col -->
-                
+
             </div><!--end .row -->
         </div><!--end .card-body -->
     </div><!--end .card -->
@@ -148,7 +137,6 @@ else
 
 
 <!-- END JAVASCRIPT -->
-
 
 
 </body>
