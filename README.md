@@ -27,34 +27,33 @@ Sno. | Name | Email
 
 ###Languages
 1. Front end development (HTML, CSS and JavaScript)
-2. Database (Oracle and MongoDB)
-3. Back end development (Java/Python)
-4. Data exchange using JSON and AJAX
+2. Database (MySQL and DynamoDB)
+3. Back end development (PHP)
 
 ###Tools Being Used
-1. IntelliJ.
-2. SQL Management Studio/SQL Server.
-3. Mongo DB.
-4. STS.
-5. AWS For hosting.
+1. IntelliJ
+2. SQL Management Studio/SQL Server
+3. DynamoDB
+4. STS
+5. AWS For hosting
+6. PHPUnit for unit test cases
 
-###Authentication/Login Test Cases.
+###Authentication/Login Test Cases
 #####Functionality
 1.	Does the login form work successfully?
-2.	Does the logout link redirects back to the login screen? 
-3.	Forgot password link should navigate to the forgot password page.
-4.	Click on back button on the browser, Does that work as expected?
+2.	Does the logout link redirect back to the login screen? 
+3.	Forgot password link should navigate to the forgot password page
+4.	Click on back button on the browser, does that work as expected?
 5.	How are errors handled and displayed?
 #####Security
 1.	Hashing of password field?
 2.	Does the password decipher after being copied?
-3.	copy and paste the password?
-4.	is there any minimum password length?
-5.	is the form giving away security information if the source is viewed/Inspect element?
+3.	Copy and paste the password?
+4.	Is there any minimum password length?
+5.	Is the form giving away security information if the source is viewed/Inspect element?
 6.	URL Manipulation?
 7.	Multiple windows of the same account/multiple logins of the same account?
 8.	Cookies allowed?
-
 
 
 ###Link to Travis-CI
@@ -79,7 +78,7 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 6.	Created Users View Page
 7.	Created Login Page
 
-###Shell Scripts Updated
+###Assignment 6 (Shell Scripts Updated):
 1. setupDbSecurityGroup.sh
 2. setupS3.sh
 3. setupWebSecurityGroup.sh 
@@ -87,3 +86,16 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 5. launchMysqlRdsInstance.sh
 6. createDynamoTable.sh
 
+###Assignment 7:
+####Application Development
+1. Checked validations on all pages
+2. Checked that all the pages are redirected correctly
+
+####Shell Scripts
+1. Created IAM Policies
+2. Created Travis user
+3. Created IAM Roles
+4. Updated launchEC2Instance Script with the required IAM roles and user data
+5. Completed Setup of S3 bucket for Code Deploy
+6. Created Script to Create Code Deploy Application
+7. Created TravisCI and App Spec Config files
