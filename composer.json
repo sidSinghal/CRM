@@ -8,5 +8,9 @@
       "name": "author's name",
       "email": "email@example.com"
     }
-  ]
+  ],
+  "require": {
+    "phpunit/phpunit": "5.3.0",
+    "aws/dynamodb-php-wrapper": "dev-master"
+  }
 }
