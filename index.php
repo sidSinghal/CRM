@@ -3,7 +3,7 @@ include('db.php');
 ob_start();
 session_start();
 
-function test_input($data)
+function sanitizeInput($data)
 {
     $data = trim($data);
     $data = stripslashes($data);
@@ -12,8 +12,8 @@ function test_input($data)
 }
 
 if (isset($_POST['login'])) {
-    $email = test_input($_POST['email']);
-    $password = test_input($_POST['password']);
+    $email = sanitizeInput($_POST['email']);
+    $password = sanitizeInput($_POST['password']);
     $type1 = $_POST['type1'];
     if ($type1 == 4) {
 
