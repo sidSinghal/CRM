@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod -R 755 /tmp/CRM
-chmod +x /tmp/CRM/scripts/*
+chmod -R 755 /home/ubuntu/CRM
+chmod +x /home/ubuntu/CRM/scripts/*
