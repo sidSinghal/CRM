@@ -7,4 +7,3 @@ wget https://bucket-name.s3.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
 sudo service codedeploy-agent status
-sudo apt-get install yum
