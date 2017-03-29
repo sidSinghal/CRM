@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
- - source: ./appspec.yml
-   destination: /home/ubuntu
- - source: src
-   destination: /var/www/html/
+  - source: ./appspec.yml
+    destination: /home/ubuntu
+  - source: src
+    destination: /var/www/html/
