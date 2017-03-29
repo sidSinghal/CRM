@@ -6,7 +6,7 @@ php:
   - '5.6'
   - hhvm
   - nightly
-cache:
+#cache:
 directories:
   - src
 install:
