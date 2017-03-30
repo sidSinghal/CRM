@@ -58,17 +58,16 @@ services:
 script:
   - cd ./src/tests
   - phpunit EmailTest.php
-#   - cd ./Team2Deployment7group/tests/EmailTest.php
-#after_success:
-#   - mkdir codedeploy
-#   - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
-#   - ls -al
-#   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/phpunit.xml
-#   - ls -al
-#   - pwd
-#   - cd codedeploy
-#   - ls -al
-#   - pwd
+after_success:
+   - mkdir codedeploy
+   - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
+   - ls -al
+   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/phpunit.xml
+   - ls -al
+   - pwd
+   - cd codedeploy
+   - ls -al
+   - pwd
 #before_deploy:
 #   - cd ..
 #deploy:
