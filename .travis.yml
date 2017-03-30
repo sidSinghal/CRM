@@ -33,7 +33,7 @@ install:
 #services:
 #   - mysql
 script:
-  - cd ./src/tests
+#  - cd ./src/tests
   - phpunit EmailTest.php
 #   - cd ./Team2Deployment7group/tests/EmailTest.php
 #after_success:
