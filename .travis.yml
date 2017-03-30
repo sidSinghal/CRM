@@ -16,8 +16,7 @@ directories:
   - src
 install:
   - composer
-#before_script:
-#!/bin/bash
+before_script:
 str=$"/n"
 sstr=$(echo -e $str)
 apt-get install python-software-properties
