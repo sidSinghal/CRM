@@ -21,12 +21,12 @@ class EmailTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testCannotBeCreatedFromInvalidEmailAddress()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-
-        \Email::fromString('invalid');
-    }
+//    public function testCannotBeCreatedFromInvalidEmailAddress()
+//    {
+//        $this->expectException(\InvalidArgumentException::class);
+//
+//        \Email::fromString('invalid');
+//    }
 
     public function testCanBeUsedAsString()
     {
