@@ -10,6 +10,10 @@
     }
   ],
   "require": {
-    "phpunit/phpunit": "5.7.0"
+    "phpunit/phpunit": "5.7.0",
+    "pear/pear": "dev-master",
+    "pear/mail_mime": "1.10.0",
+    "pear/mail": "1.3.0",
+    "pear/net_smtp": "1.7.3"
   }
 }
