@@ -30,10 +30,10 @@ install:
 #  - sudo service apache2 restart
 #before_script:
 #   - chmod 0777 ./src
-services:
-   - mysql
-#script: cd ./src/tests/ClientTest.php
-#   - cd ./Team2Deployment7group/tests/
+#services:
+#   - mysql
+script: cd ./src/tests/ClientTest.php
+#   - cd ./Team2Deployment7group/tests/EmailTest.php
 #after_success:
 #   - mkdir codedeploy
 #   - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
