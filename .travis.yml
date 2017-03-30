@@ -32,8 +32,8 @@ before_script:
    - chmod 0777 ./src
 services:
    - mysql
-script:
-   - cd ./Team2Deployment7group/tests/
+#script:
+#   - cd ./Team2Deployment7group/tests/
 after_success:
    - mkdir codedeploy
    - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
