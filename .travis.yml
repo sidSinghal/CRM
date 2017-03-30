@@ -1,0 +1,66 @@
+# safelist
+branches:
+  only:
+  - master
+  
+language: php
+sudo: required
+dist: trusty
+group: edge
+php:
+  - '5.6'
+  - hhvm
+  - nightly
+#cache:
+directories:
+  - src
+install:
+  - composer
+before_script:
+  - sudo apt-get update
+  - sudo apt-get install apache2 libapache2-mod-fastcgi
+  # enable php-fpm
+  - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
+  - sudo a2enmod rewrite actions fastcgi alias
+  - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+  # configure apache virtual hosts
+  - sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/default
+  - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
+  - sudo service apache2 restart
+before_script:
+   - chmod 0777 ./src
+services:
+   - mysql
+script:
+   - cd ./Team2Deployment7group/test
+after_success:
+   - mkdir codedeploy
+   - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
+   - ls -al
+   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/
+   - ls -al
+   - pwd
+   - cd codedeploy
+   - ls -al
+   - pwd
+before_deploy:
+   - cd ..
+deploy:
+ - provider: s3
+   access_key_id: AKIAJ2P47NBCEFNVPURA
+   secret_access_key:
+   local_dir: codedeploy
+   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+   region: us-east-1
+   skip_cleanup: true
+ - provider: codedeploy
+   access_key_id: AKIAJ2P47NBCEFNVPURA
+   secret_access_key:
+   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+   key: neu-csye6225-Team2-ProjectCRM.zip
+   bundle_type: zip
+   application: CRMMavericksProject
+   deployment_group: team2
+   region: us-east-1
+   wait-until-deployed: true
