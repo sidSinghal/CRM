@@ -33,7 +33,7 @@ before_script:
 services:
    - mysql
 script:
-   - cd ./src/test
+   - cd ./Team2Deployment7group/tests
 after_success:
    - mkdir codedeploy
    - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
