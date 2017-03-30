@@ -7,6 +7,9 @@ include('../Email.php');
  * Date: 3/24/2017
  * Time: 12:25 AM
  */
+
+namespace Test;
+
 class EmailTest extends PHPUnit_Framework_TestCase
 {
 

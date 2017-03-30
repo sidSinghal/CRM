@@ -6,6 +6,9 @@ include('../SampleMethods.php');
  * Date: 3/23/2017
  * Time: 6:50 PM
  */
+
+namespace Test;
+
 class ClientTest extends PHPUnit_Framework_TestCase
 {
 
