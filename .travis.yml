@@ -70,23 +70,23 @@ after_success:
    - pwd
 before_deploy:
    - cd ..
-deploy:
- - provider: s3
-   access_key_id: AKIAJ2P47NBCEFNVPURA
-   secret_access_key:
-     secure: EOSLWmBq+82BEw1SLytsZkBBNAr7oFV6hh5Yl19fI1PcyC0rssgyajSzt/biAremCFqvoKHabVLjKXAxQbBUQHwLPX7tn/zBPSrIt8bDZY7wZc7lq1/y826Mo9EU3KTcnbZKjvAfC/3UIieg15txccIhwFexGtUygwj9knXlyjvAoi6xq2xwJr8lJo2mkf+aFuHIEXwl+KoY8zNANyO4dWA7iJ1ehEzOtTyASygOGgh3kD24+eP9bQynKBmMK1f5RUdBYVqi8BU70GxdDaN8kRQTbHtZS8TYb5j1G3n/aTOAv8lwvHLUyCpio0PkJdi7id+gILzqzRXSW9H8Hpz+DHGZd3S8ed+saZE5VgneFbwFoPk1vOq05K62EnMPanKvP7JMxy2XUPoNXM5YVxCsWkkOX32aGHEn+hnIB6rdypAY++DFnoYnodhOoBZVtT7uforwNIuFsH307crhCVRJ1UXVgRBR0aB9bE761F5PX/Znho4aSgi0fUgxusL328FOgfKo2Di+N8B+TWZSLXQvGep0Wm+eRDWQ2nneCIa9aXZ5uDxrhGLVrt4Qtie5Jl2xVVyJCaC9h9AGTO4OoE0PXLPBeQMbCPqxNyHrRGQzu2oqE1d1qxtG3myj6t3/9liFmCEv9fPB363NrHyTr5oeiEetW4QRIhTEJPXXJCJdjNM=
-   local_dir: codedeploy
-   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
-   region: us-east-1
-   skip_cleanup: true
- - provider: codedeploy
-   access_key_id: AKIAJ2P47NBCEFNVPURA
-   secret_access_key:
-     secure: EOSLWmBq+82BEw1SLytsZkBBNAr7oFV6hh5Yl19fI1PcyC0rssgyajSzt/biAremCFqvoKHabVLjKXAxQbBUQHwLPX7tn/zBPSrIt8bDZY7wZc7lq1/y826Mo9EU3KTcnbZKjvAfC/3UIieg15txccIhwFexGtUygwj9knXlyjvAoi6xq2xwJr8lJo2mkf+aFuHIEXwl+KoY8zNANyO4dWA7iJ1ehEzOtTyASygOGgh3kD24+eP9bQynKBmMK1f5RUdBYVqi8BU70GxdDaN8kRQTbHtZS8TYb5j1G3n/aTOAv8lwvHLUyCpio0PkJdi7id+gILzqzRXSW9H8Hpz+DHGZd3S8ed+saZE5VgneFbwFoPk1vOq05K62EnMPanKvP7JMxy2XUPoNXM5YVxCsWkkOX32aGHEn+hnIB6rdypAY++DFnoYnodhOoBZVtT7uforwNIuFsH307crhCVRJ1UXVgRBR0aB9bE761F5PX/Znho4aSgi0fUgxusL328FOgfKo2Di+N8B+TWZSLXQvGep0Wm+eRDWQ2nneCIa9aXZ5uDxrhGLVrt4Qtie5Jl2xVVyJCaC9h9AGTO4OoE0PXLPBeQMbCPqxNyHrRGQzu2oqE1d1qxtG3myj6t3/9liFmCEv9fPB363NrHyTr5oeiEetW4QRIhTEJPXXJCJdjNM=
-   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
-   key: neu-csye6225-Team2-ProjectCRM.zip
-   bundle_type: zip
-   application: CRMMavericksProject
-   deployment_group: Mavericks
-   region: us-east-1
-   wait-until-deployed: true
+#deploy:
+# - provider: s3
+#   access_key_id: AKIAJ2P47NBCEFNVPURA
+#   secret_access_key:
+#     secure: EOSLWmBq+82BEw1SLytsZkBBNAr7oFV6hh5Yl19fI1PcyC0rssgyajSzt/biAremCFqvoKHabVLjKXAxQbBUQHwLPX7tn/zBPSrIt8bDZY7wZc7lq1/y826Mo9EU3KTcnbZKjvAfC/3UIieg15txccIhwFexGtUygwj9knXlyjvAoi6xq2xwJr8lJo2mkf+aFuHIEXwl+KoY8zNANyO4dWA7iJ1ehEzOtTyASygOGgh3kD24+eP9bQynKBmMK1f5RUdBYVqi8BU70GxdDaN8kRQTbHtZS8TYb5j1G3n/aTOAv8lwvHLUyCpio0PkJdi7id+gILzqzRXSW9H8Hpz+DHGZd3S8ed+saZE5VgneFbwFoPk1vOq05K62EnMPanKvP7JMxy2XUPoNXM5YVxCsWkkOX32aGHEn+hnIB6rdypAY++DFnoYnodhOoBZVtT7uforwNIuFsH307crhCVRJ1UXVgRBR0aB9bE761F5PX/Znho4aSgi0fUgxusL328FOgfKo2Di+N8B+TWZSLXQvGep0Wm+eRDWQ2nneCIa9aXZ5uDxrhGLVrt4Qtie5Jl2xVVyJCaC9h9AGTO4OoE0PXLPBeQMbCPqxNyHrRGQzu2oqE1d1qxtG3myj6t3/9liFmCEv9fPB363NrHyTr5oeiEetW4QRIhTEJPXXJCJdjNM=
+#   local_dir: codedeploy
+#   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+#   region: us-east-1
+#   skip_cleanup: true
+# - provider: codedeploy
+#   access_key_id: AKIAJ2P47NBCEFNVPURA
+#   secret_access_key:
+#     secure: EOSLWmBq+82BEw1SLytsZkBBNAr7oFV6hh5Yl19fI1PcyC0rssgyajSzt/biAremCFqvoKHabVLjKXAxQbBUQHwLPX7tn/zBPSrIt8bDZY7wZc7lq1/y826Mo9EU3KTcnbZKjvAfC/3UIieg15txccIhwFexGtUygwj9knXlyjvAoi6xq2xwJr8lJo2mkf+aFuHIEXwl+KoY8zNANyO4dWA7iJ1ehEzOtTyASygOGgh3kD24+eP9bQynKBmMK1f5RUdBYVqi8BU70GxdDaN8kRQTbHtZS8TYb5j1G3n/aTOAv8lwvHLUyCpio0PkJdi7id+gILzqzRXSW9H8Hpz+DHGZd3S8ed+saZE5VgneFbwFoPk1vOq05K62EnMPanKvP7JMxy2XUPoNXM5YVxCsWkkOX32aGHEn+hnIB6rdypAY++DFnoYnodhOoBZVtT7uforwNIuFsH307crhCVRJ1UXVgRBR0aB9bE761F5PX/Znho4aSgi0fUgxusL328FOgfKo2Di+N8B+TWZSLXQvGep0Wm+eRDWQ2nneCIa9aXZ5uDxrhGLVrt4Qtie5Jl2xVVyJCaC9h9AGTO4OoE0PXLPBeQMbCPqxNyHrRGQzu2oqE1d1qxtG3myj6t3/9liFmCEv9fPB363NrHyTr5oeiEetW4QRIhTEJPXXJCJdjNM=
+#   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+#   key: neu-csye6225-Team2-ProjectCRM.zip
+#   bundle_type: zip
+#   application: CRMMavericksProject
+#   deployment_group: Mavericks
+#   region: us-east-1
+#   wait-until-deployed: true
