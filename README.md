@@ -17,13 +17,10 @@ Sno. | Name | Email
 ### Functionalities
 1. Login
 2. Logout
-3. User Management
-4. Accounts Management
-5. Contacts Management
-6. Leads Management
-7. Opportunity Management
-8. Sales Users and Administrator Management
-9. Products
+3. Client Management
+4. Project Management
+5. Sales Users and Administrator Management
+6. Products
 
 ### Languages
 1. Front end development (HTML, CSS and JavaScript)
@@ -32,9 +29,10 @@ Sno. | Name | Email
 
 ### Tools Being Used
 1. IntelliJ
-2. SQL Management Studio/SQL Server
+2. MySQL
 3. AWS For hosting
 4. PHPUnit for unit test cases
+
 
 ### Authentication/Login Test Cases
 ##### Functionality
