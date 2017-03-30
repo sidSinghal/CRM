@@ -32,7 +32,7 @@ install:
 #   - chmod 0777 ./src
 services:
    - mysql
-script: src/tests/ClientTest.php
+script: ../src/tests/ClientTest.php
 #   - cd ./Team2Deployment7group/tests/
 #after_success:
 #   - mkdir codedeploy
