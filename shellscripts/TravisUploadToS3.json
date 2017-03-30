@@ -1,0 +1,16 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:iam::604969125055:group/Admins",
+                "arn:aws:iam::604969125055:group/Graders",
+                "arn:aws:s3:::code-deploy2.neu-csye6225-spring2017-team-2.com/*"
+            ]
+        }
+    ]
+}
