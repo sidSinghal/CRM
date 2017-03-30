@@ -32,7 +32,9 @@ install:
 #   - chmod 0777 ./src
 #services:
 #   - mysql
-script: cd ./src/tests/ClientTest.php
+script:
+  - cd ./src/tests
+  - phpunit EmailTest.php
 #   - cd ./Team2Deployment7group/tests/EmailTest.php
 #after_success:
 #   - mkdir codedeploy
