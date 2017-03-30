@@ -32,7 +32,7 @@ install:
 #   - chmod 0777 ./src
 services:
    - mysql
-script: ../src/tests/ClientTest.php
+script: cd ./src/tests/ClientTest.php
 #   - cd ./Team2Deployment7group/tests/
 #after_success:
 #   - mkdir codedeploy
@@ -63,6 +63,6 @@ script: ../src/tests/ClientTest.php
 #   key: neu-csye6225-Team2-ProjectCRM.zip
 #   bundle_type: zip
 #   application: CRMMavericksProject
-#   deployment_group: team2
+#   deployment_group: Mavericks
 #   region: us-east-1
 #   wait-until-deployed: true
