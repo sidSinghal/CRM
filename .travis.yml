@@ -33,12 +33,12 @@ before_script:
 services:
    - mysql
 script:
-   - cd ./Team2Deployment7group/tests
+   - cd ./Team2Deployment7group/tests/
 after_success:
    - mkdir codedeploy
    - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml
    - ls -al
-   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/
+   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/phpunit.xml
    - ls -al
    - pwd
    - cd codedeploy
