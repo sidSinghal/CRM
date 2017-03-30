@@ -10,7 +10,6 @@
     }
   ],
   "require": {
-    "phpunit/phpunit": "5.3.0",
-    "aws/dynamodb-php-wrapper": "dev-master"
+    "phpunit/phpunit": "5.7.0"
   }
 }

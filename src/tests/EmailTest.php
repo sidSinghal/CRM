@@ -1,4 +1,5 @@
 <?php
+namespace Test;
 include('../Email.php');
 
 /**
@@ -8,16 +9,15 @@ include('../Email.php');
  * Time: 12:25 AM
  */
 
-namespace Test;
 
-class EmailTest extends PHPUnit_Framework_TestCase
+class EmailTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testCanBeCreatedFromValidEmailAddress()
     {
         $this->assertInstanceOf(
-            Email::class,
-            Email::fromString('user@example.com')
+            \Email::class,
+            \Email::fromString('user@example.com')
         );
     }
 
@@ -25,14 +25,14 @@ class EmailTest extends PHPUnit_Framework_TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        Email::fromString('invalid');
+        \Email::fromString('invalid');
     }
 
     public function testCanBeUsedAsString()
     {
         $this->assertEquals(
             'user@example.com',
-            Email::fromString('user@example.com')
+            \Email::fromString('user@example.com')
         );
     }
 }
