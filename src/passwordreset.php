@@ -1,3 +1,11 @@
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: sneha
+ * Date: 3/31/2017
+ * Time: 5:41 AM
+ */
+
 <?php
 include('db.php');
 ob_start();
@@ -12,33 +20,23 @@ function sanitizeInput($data)
     return $data;
 }
 
-if (isset($_POST['login'])) {
-    $email = sanitizeInput($_POST['email']);
-    $password = sanitizeInput($_POST['password']);
-    $type1 = $_POST['type1'];
-    if ($type1 == 4) {
+$uid=$_SESSION['uid'];
+$name=$_SESSION['name'];
+$typeid=$_SESSION['typeid'];
+$email=$_SESSION['email'];
+if (isset($_POST['confirm'])) {
+    $password1 = $_POST['password'];
+    $password2 = $_POST['confirmpassword'];
+    if ($password1==$password2){
+        $q2 = "UPDATE users SET password = '$password' WHERE email ='$email1'";
+        $r2 = mysqli_query($dbc, $q2);
+    }
 
-        $query1 = "SELECT * FROM clients WHERE email ='$email' AND password = '$password'";
-        $result1 = mysqli_query($dbc, $query1);
-        $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($result1);
-        if ($count == 1) {
-            header('Location: user_list.php');
-        } else {
-            header('Location: index.php?error=1');
-        }
+    $count = mysqli_num_rows($r2);
+    if ($count == 1) {
+        header('Location: index.php');
     } else {
-        $query1 = "SELECT * FROM users WHERE email ='$email' AND password = '$password' AND typeid = '$type1'";
-        $result1 = mysqli_query($dbc, $query1);
-        $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($result1);
-        $attempt_counts=0;
-        if ($count == 1) {
-
-            header('Location: new_user.php');
-        } else {
-            header('Location: index.php?error=1');
-        }
+        header('Location: passwordreset.php?error=5');
     }
 }
 ?>
@@ -93,29 +91,22 @@ if (isset($_POST['login'])) {
                     <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Sign in to start your session</span>
                     <br/><br/>
                     <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
-                        <div class="form-group">
-                            <select id="type1" name="type1" class="form-control" required>
-                                <option value="">&nbsp;</option>
-                                <option value="1">Admin</option>
-                                <option value="2">User</option>
-                                <!--				<option value="4">Client</option>-->
-                            </select>
-                            <label for="usertype">Type</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <label for="email">Email</label>
-                        </div>
+
+
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" name="password" required>
                             <label for="password">Password</label>
                         </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
+                            <label for="confirmpassword">Confirm Passoword</label>
+                        </div>
                         <br/>
                         <div class="row">
                             <div class="col-xs-6 text-right">
-                                <input type="submit" class="btn btn-primary btn-raised" name="login" id="login"
-                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Login"/><br/>
-                                <a href="askemail.php">forgot password</a>
+                                <input type="submit" class="btn btn-primary btn-raised" name="confirm" id="confirm"
+                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Confirm"/><br/>
+
                             </div><!--end .col -->
                         </div><!--end .row -->
                     </form>

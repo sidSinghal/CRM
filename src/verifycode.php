@@ -1,3 +1,11 @@
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: sneha
+ * Date: 3/31/2017
+ * Time: 5:39 AM
+ */
+
 <?php
 include('db.php');
 ob_start();
@@ -12,35 +20,24 @@ function sanitizeInput($data)
     return $data;
 }
 
-if (isset($_POST['login'])) {
-    $email = sanitizeInput($_POST['email']);
-    $password = sanitizeInput($_POST['password']);
-    $type1 = $_POST['type1'];
-    if ($type1 == 4) {
+$digits = 6;
+$gencode = rand(pow(10, $digits-1), pow(10, $digits)-1);
 
-        $query1 = "SELECT * FROM clients WHERE email ='$email' AND password = '$password'";
-        $result1 = mysqli_query($dbc, $query1);
-        $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($result1);
-        if ($count == 1) {
-            header('Location: user_list.php');
-        } else {
-            header('Location: index.php?error=1');
-        }
+
+$uid=$_SESSION['uid'];
+$name=$_SESSION['name'];
+//$typeid=$_SESSION['typeid'];
+$email=$_SESSION['email'];
+if (isset($_POST['verify'])) {
+    $code = $_POST['code'];
+    if ($code=$gencode)
+    {
+        header('Location: passwordreset.php');
     } else {
-        $query1 = "SELECT * FROM users WHERE email ='$email' AND password = '$password' AND typeid = '$type1'";
-        $result1 = mysqli_query($dbc, $query1);
-        $_SESSION = mysqli_fetch_array($result1, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($result1);
-        $attempt_counts=0;
-        if ($count == 1) {
-
-            header('Location: new_user.php');
-        } else {
-            header('Location: index.php?error=1');
-        }
+        header('Location: verifycode.php?error=1');
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -93,29 +90,18 @@ if (isset($_POST['login'])) {
                     <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Sign in to start your session</span>
                     <br/><br/>
                     <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
+                        Please fill in the code sent to you on
                         <div class="form-group">
-                            <select id="type1" name="type1" class="form-control" required>
-                                <option value="">&nbsp;</option>
-                                <option value="1">Admin</option>
-                                <option value="2">User</option>
-                                <!--				<option value="4">Client</option>-->
-                            </select>
-                            <label for="usertype">Type</label>
+                            <input type="email" class="form-control" id="code" name="code" required>
+                            <label for="email">Please enter the code sent to the given email ID to reset your password</label>
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="password" name="password" required>
-                            <label for="password">Password</label>
-                        </div>
+
                         <br/>
                         <div class="row">
                             <div class="col-xs-6 text-right">
-                                <input type="submit" class="btn btn-primary btn-raised" name="login" id="login"
-                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Login"/><br/>
-                                <a href="askemail.php">forgot password</a>
+                                <input type="submit" class="btn btn-primary btn-raised" name="verify" id="verify"
+                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Verify"/><br/>
+
                             </div><!--end .col -->
                         </div><!--end .row -->
                     </form>
