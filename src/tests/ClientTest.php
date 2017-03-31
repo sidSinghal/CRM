@@ -1,4 +1,5 @@
 <?php
+namespace Test;
 include('../SampleMethods.php');
 /**
  * Created by IntelliJ IDEA.
@@ -7,14 +8,14 @@ include('../SampleMethods.php');
  * Time: 6:50 PM
  */
 
-namespace Test;
 
-class ClientTest extends PHPUnit_Framework_TestCase
+
+class ClientTest extends \PHPUnit_Framework_TestCase
 {
 
     function test_sanitizeInput()    {
         $data = 'sajdfj//';
-        $obj = new SampleMethods();
+        $obj = new \SampleMethods();
         $newData = $obj->funcInput($data);
 
         echo $newData;
