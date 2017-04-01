@@ -26,7 +26,7 @@
  * @link      http://pear.php.net/packages/Net_Socket
  */
 
-require_once 'PEAR.php';
+require_once (__DIR__.'/../../pear-core-minimal/src/PEAR.php');
 
 define('NET_SOCKET_READ', 1);
 define('NET_SOCKET_WRITE', 2);

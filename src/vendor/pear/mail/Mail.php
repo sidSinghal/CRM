@@ -43,7 +43,8 @@
  * @link        http://pear.php.net/package/Mail/
  */
 
-require_once 'PEAR.php';
+require_once (__DIR__.'/../pear-core-minimal/src/PEAR.php');
+//pear-core-minimal/src/PEAR.php';
 
 /**
  * PEAR's Mail:: interface. Defines the interface for implementing

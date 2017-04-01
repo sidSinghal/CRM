@@ -44,6 +44,8 @@
  * @link        http://pear.php.net/package/Mail/
  */
 
+
+
 /** Error: Failed to create a Net_SMTP object */
 define('PEAR_MAIL_SMTP_ERROR_CREATE', 10000);
 
@@ -342,7 +344,7 @@ class Mail_smtp extends Mail {
             return $this->_smtp;
         }
 
-        include_once 'Net/SMTP.php';
+        include_once (__DIR__.'/../../net_smtp/Net/SMTP.php');
         $this->_smtp = new Net_SMTP($this->host,
                                      $this->port,
                                      $this->localhost,

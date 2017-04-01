@@ -9,17 +9,17 @@
 
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
-define('SENDER', 'sneha.malshetti@yahoo.com');
+define('SENDER', 'neu-csye6225-spring2017-team-2@mailinator.com');
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-define('RECIPIENT', 'sneha.malshetti@yahoo.com');
+define('RECIPIENT', 'neu-csye6225-spring2017-team-2@mailinator.com');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-define('USERNAME','AKIAI7OSIBVVDR5DJ6NQ');
+define('USERNAME','AKIAIH67KMZ4CUVZFQJQ');
 
 // Replace smtp_password with your Amazon SES SMTP password.
-define('PASSWORD','ArmyyjePGqZdfcX5lJk6XmYI1RQ3MHrVq9qE6TfX/u+k');
+define('PASSWORD','AhV3IJHbfXBWWRuqOt1aBal/gvvTXVos9DxXQfhWtE4P');
 
 // If you're using Amazon SES in a region other than US West (Oregon),
 // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
@@ -29,15 +29,14 @@ define('HOST', 'email-smtp.us-east-1.amazonaws.com');
 // The port you will connect to on the Amazon SES SMTP endpoint.
 define('PORT', '587');
 
+
 // Other message information
 define('SUBJECT','Amazon SES test (SMTP interface accessed using PHP)');
 define('BODY','This email was sent through the Amazon SES SMTP interface by using PHP.');
 
-require_once '/Mail.php';
-//require_once 'pear/mail';
+//require_once 'vendor/pear/mail';
+require_once '../src/vendor/pear/mail/Mail.php';
 //require ("class.phpmailer.php");
-
-
 
 
 
@@ -54,8 +53,13 @@ $smtpParams = array (
     'password' => PASSWORD
 );
 
+
+
+
 // Create an SMTP client.
 $mail = Mail::factory('smtp', $smtpParams);
+
+
 
 // Send the email.
 $result = $mail->send(RECIPIENT, $headers, BODY);
