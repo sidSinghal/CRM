@@ -1,13 +1,16 @@
 
+
+
+<?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: sneha
  * Date: 3/31/2017
  * Time: 5:39 AM
  */
-
-<?php
 include('db.php');
+
 ob_start();
 session_start();
 
@@ -20,21 +23,110 @@ function sanitizeInput($data)
     return $data;
 }
 
-$digits = 6;
-$gencode = rand(pow(10, $digits-1), pow(10, $digits)-1);
+
 
 
 $uid=$_SESSION['uid'];
 $name=$_SESSION['name'];
 //$typeid=$_SESSION['typeid'];
 $email=$_SESSION['email'];
+
+
+
+
 if (isset($_POST['verify'])) {
-    $code = $_POST['code'];
-    if ($code=$gencode)
+    $code = sanitizeInput($_POST['code']);
+
+    $gencode  = $_SESSION['gencode'];
+//    echo $code;
+//    echo $gencode;
+    if ($code==$gencode)
     {
+//        echo "<script>alert('The code matches the code sent to you on your ID'.$code.$gencode);</script>";
+// window.location.href='passwordreset.php';
+//        redirect('admin/ahm/panel');
         header('Location: passwordreset.php');
     } else {
-        header('Location: verifycode.php?error=1');
+        echo "<script>alert('The code does not match the code sent to you on your ID'.$code.$gencode);window.location.href='verifycode.php?error=1';</script>";
+//        window.location.href='verifycode.php';
+        //header('Location: verifycode.php?error=1');
+    }
+}
+else{
+    $digits = 6;
+    $gencode = rand(pow(10, $digits-1), pow(10, $digits)-1);
+//    echo $gencode;
+//
+    $uid=$_SESSION['uid'];
+    $name=$_SESSION['name'];
+//$typeid=$_SESSION['typeid'];
+    $email=$_SESSION['email'];
+//    echo $email;
+
+
+    define('SENDER', 'neu-csye6225-spring2017-team-2@mailinator.com');
+
+// Replace recipient@example.com with a "To" address. If your account
+// is still in the sandbox, this address must be verified.
+    define('RECIPIENT', $email);
+
+// Replace smtp_username with your Amazon SES SMTP user name.
+    define('USERNAME','AKIAIH67KMZ4CUVZFQJQ');
+
+// Replace smtp_password with your Amazon SES SMTP password.
+    define('PASSWORD','AhV3IJHbfXBWWRuqOt1aBal/gvvTXVos9DxXQfhWtE4P');
+
+// If you're using Amazon SES in a region other than US West (Oregon),
+// replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
+// endpoint in the appropriate region.
+    define('HOST', 'email-smtp.us-east-1.amazonaws.com');
+
+// The port you will connect to on the Amazon SES SMTP endpoint.
+    define('PORT', '587');
+
+
+// Other message information
+    define('SUBJECT','CRM Password Reset Code');
+    define('BODY','The code for resetting your password is as follows:'.$gencode);
+
+//require_once 'vendor/pear/mail';
+    require_once '../src/vendor/pear/mail/Mail.php';
+//require ("class.phpmailer.php");
+
+
+
+    $headers = array (
+        'From' => SENDER,
+        'To' => RECIPIENT,
+        'Subject' => SUBJECT);
+
+    $smtpParams = array (
+        'host' => HOST,
+        'port' => PORT,
+        'auth' => true,
+        'username' => USERNAME,
+        'password' => PASSWORD
+    );
+
+
+
+
+// Create an SMTP client.
+    $mail = Mail::factory('smtp', $smtpParams);
+
+
+// Send the email.
+    $result = $mail->send(RECIPIENT, $headers, BODY);
+
+    if (PEAR::isError($result)) {
+
+//        echo ("Email not sent. " .$result->getMessage() ."\n");
+        echo "<script>alert('Email not sent. " .$result->getMessage() ."\n');</script>";
+    } else {
+//        echo ("Email sent!"."\n");
+        $_SESSION['gencode'] = $gencode;
+        echo "<script>alert('Email Sent!');</script>";
+//        redirect('admin/ahm/panel');
     }
 }
 
@@ -87,20 +179,20 @@ if (isset($_POST['verify'])) {
                 <div class="col-sm-12">
                     <br/>
                     <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
-                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Sign in to start your session</span>
+                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;"></span>
                     <br/><br/>
-                    <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
-                        Please fill in the code sent to you on
+                    <form class="form floating-label" action="verifycode.php" accept-charset="utf-8" method="post">
+
                         <div class="form-group">
-                            <input type="email" class="form-control" id="code" name="code" required>
-                            <label for="email">Please enter the code sent to the given email ID to reset your password</label>
+                            <input type="text" class="form-control" id="code" name="code" required>
+                            <label for="code">Please enter the code sent to the given email ID to reset your password</label>
                         </div>
 
                         <br/>
                         <div class="row">
                             <div class="col-xs-6 text-right">
                                 <input type="submit" class="btn btn-primary btn-raised" name="verify" id="verify"
-                                       style="background-color : #2B323A; border-color : #2B323A;" Value="Verify"/><br/>
+                                       style="background-color : #2B323A; border-color : #2B323A;" Value="verify"/><br/>
 
                             </div><!--end .col -->
                         </div><!--end .row -->

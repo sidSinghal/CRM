@@ -1,4 +1,8 @@
 
+
+
+<?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: sneha
@@ -6,7 +10,6 @@
  * Time: 5:41 AM
  */
 
-<?php
 include('db.php');
 ob_start();
 session_start();
@@ -25,18 +28,34 @@ $name=$_SESSION['name'];
 $typeid=$_SESSION['typeid'];
 $email=$_SESSION['email'];
 if (isset($_POST['confirm'])) {
-    $password1 = $_POST['password'];
-    $password2 = $_POST['confirmpassword'];
-    if ($password1==$password2){
-        $q2 = "UPDATE users SET password = '$password' WHERE email ='$email1'";
-        $r2 = mysqli_query($dbc, $q2);
-    }
+    $password1 = sanitizeInput($_POST['password']);
+    $password2 = sanitizeInput($_POST['confirmpassword']);
+//    echo $password1;
+//    echo $password2;
+    if ($password1==$password2) {
 
-    $count = mysqli_num_rows($r2);
-    if ($count == 1) {
-        header('Location: index.php');
-    } else {
-        header('Location: passwordreset.php?error=5');
+        $q2 = "UPDATE users SET password = '$password1' WHERE email ='$email'";
+        $r2 = mysqli_query($dbc, $q2);
+
+
+        //$count = mysqli_num_rows($r2);
+        //echo $count;
+        if ($r2) {
+
+            echo "<script>alert('Your password has been reset. Please login using your new password');
+            window.location.href='index.php';</script>";
+//            redirect(__Dir__.'index.php');
+//            header('Location: index.php');
+        } else {
+            echo "<script>alert('Your password could not be reset... Please Try again!'.$count);
+            window.location.href='passwordreset.php';</script>";
+//            header('Location: passwordreset.php?error=1');
+        }
+
+    }else {
+        echo "<script>alert('Passwords do not match... Please try again! count=');
+        window.location.href='passwordreset.php';</script>";
+//        header('Location: passwordreset.php?error=1');
     }
 }
 ?>
@@ -49,7 +68,7 @@ if (isset($_POST['confirm'])) {
     <!-- BEGIN META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="your,keywords">
+    <meta name="keywords" content="your, keywords">
     <meta name="description" content="Short explanation about this website">
     <!-- END META -->
 
@@ -88,9 +107,9 @@ if (isset($_POST['confirm'])) {
                 <div class="col-sm-12">
                     <br/>
                     <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
-                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Sign in to start your session</span>
+                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Please type in the new password:</span>
                     <br/><br/>
-                    <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
+                    <form class="form floating-label" action="passwordreset.php" accept-charset="utf-8" method="post">
 
 
                         <div class="form-group">

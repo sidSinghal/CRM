@@ -1,11 +1,12 @@
 
+
+<?php
 /**
  * Created by IntelliJ IDEA.
  * User: sneha
  * Date: 3/29/2017
  * Time: 11:09 PM
  */
-<?php
 include('db.php');
 ob_start();
 session_start();
@@ -22,16 +23,19 @@ $uid=$_SESSION['uid'];
 $name=$_SESSION['name'];
 $typeid=$_SESSION['typeid'];
 $email=$_SESSION['email'];
-if (isset($_POST['login'])) {
+if (isset($_POST['forgotPassword'])) {
     $email = $_POST['email'];
-    $q2 = "SELECT * FROM users WHERE email ='$email1'";
+    $q2 = "SELECT * FROM users WHERE email ='$email'";
     $r2 = mysqli_query($dbc, $q2);
     $_SESSION = mysqli_fetch_array($r2, MYSQLI_ASSOC);
     $count = mysqli_num_rows($r2);
     if ($count == 1) {
-        header('Location: user_list.php');
+        header('Location: verifycode.php');
     } else {
-        header('Location: askemail.php?error=1');
+        echo "<script>alert('The email doesnt exist in the application!');
+        window.location.href='askemail.php';</script>";
+//        redirect('askemail.php');
+//        header('Location: askemail.php?error=1');
     }
 }
 
