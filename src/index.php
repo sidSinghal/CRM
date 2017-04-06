@@ -114,6 +114,8 @@ if (isset($_POST['login'])) {
                             <div class="col-xs-6 text-right">
                                 <input type="submit" class="btn btn-primary btn-raised" name="login" id="login"
                                        style="background-color : #2B323A; border-color : #2B323A;" Value="Login"/>
+
+                                <a href="askemail.php">forgot password</a>
                             </div><!--end .col -->
                         </div><!--end .row -->
                     </form>
