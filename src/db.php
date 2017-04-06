@@ -1,13 +1,13 @@
 <?php
 
 
-DEFINE('DATABASE_USER', 'root');
-DEFINE('DATABASE_PASSWORD', '');
-DEFINE('DATABASE_HOST', 'localhost');
-DEFINE('DATABASE_NAME', 'testcrm');
+DEFINE('DATABASE_USER', 'karthik');
+DEFINE('DATABASE_PASSWORD', 'abcd1234');
+DEFINE('DATABASE_HOST', 'csye6225team2.cdhrfxkbwgbm.us-east-1.rds.amazonaws.com:3306');
+DEFINE('DATABASE_NAME', 'testcrm1');
 
 
-define('EMAIL', 'siddhant.singhal0991@gmail.com');
+define('EMAIL', 'chandrashekar.k@husky.neu.edu');
 
 
 $dbc = @mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSWORD,
