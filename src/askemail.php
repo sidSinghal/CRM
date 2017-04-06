@@ -87,7 +87,7 @@ if (isset($_POST['forgotPassword'])) {
                 <div class="col-sm-12" text_align="center">
                     <br/>
                     <h2 style="padding-left: 270px;">Mavericks CRM</h2><br/><br/><br/>
-                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Please provide an email ID on which the reset password code has to be sent</span>
+                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 70px;">Please provide an email ID for the password reset code</span>
                     <br/><br/>
                     <form class="form floating-label" action="askemail.php" accept-charset="utf-8" method="post">
 
