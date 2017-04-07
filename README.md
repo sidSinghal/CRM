@@ -2,6 +2,9 @@
 
 ## Project Design Document
 
+## Status
+[![Build Status](https://travis-ci.com/el9sid/neu-csye6225-4.png)](https://travis-ci.com/el9sid/neu-csye6225-4)
+
 ### Team Members
 Sno. | Name | Email
 ---- | ------------ | -------------
