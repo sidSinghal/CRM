@@ -87,6 +87,8 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 1. Checked validations on all pages
 2. Checked that all the pages are redirected correctly
 
+### Application Link: https://neu-csye6225-spring2017-team-2.com/
+
 ### Assignment 8:
 ####Securing Infrastructure
 1. Added SSL certificate protection to the web application
