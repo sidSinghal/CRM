@@ -6,3 +6,5 @@ files:
     destination: /home/ubuntu
   - source: src
     destination: /var/www/html/
+  - source: ./awslogs.conf
+    destination: /var/awslogs/etc
