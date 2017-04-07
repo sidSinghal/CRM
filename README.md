@@ -87,7 +87,7 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 1. Checked validations on all pages
 2. Checked that all the pages are redirected correctly
 
-### Assignment 7:
+### Assignment 8:
 ####Securing Infrastructure
 1. Added SSL certificate protection to the web application
 2. setup-and-configure-ssl.md file was created
