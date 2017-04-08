@@ -5,6 +5,8 @@
 ## Status
 [![Build Status](https://travis-ci.com/el9sid/neu-csye6225-4.svg?token=idTvFK8AtkxesR4Ko7vt&branch=master)](https://travis-ci.com/el9sid/neu-csye6225-4)
 
+### Application Link: https://neu-csye6225-spring2017-team-2.com/
+
 ### Team Members
 Sno. | Name | Email
 ---- | ------------ | -------------
@@ -86,21 +88,6 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 6. createDynamoTable.sh
 
 ### Assignment 7:
-#### Application Development
-1. Checked validations on all pages
-2. Checked that all the pages are redirected correctly
-
-### Application Link: https://neu-csye6225-spring2017-team-2.com/
-
-### Assignment 8:
-####Securing Infrastructure
-1. Added SSL certificate protection to the web application
-2. setup-and-configure-ssl.md file was created
-
-#### Implement Password Reset (Forgotten Password)
-1. Checked if the Email ID Entered exists in the database
-2. Set up the AWS Simple Email Service 
-
 #### Shell Scripts
 1. Created IAM Policies
 2. Created Travis user
@@ -109,3 +96,14 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 5. Completed Setup of S3 bucket for Code Deploy
 6. Created Script to Create Code Deploy Application
 7. Created TravisCI and App Spec Config files
+
+### Assignment 8:
+#### Application Development
+1. Checked validations on all pages
+2. Checked that all the pages are redirected correctly
+#### Securing Infrastructure
+1. Added SSL certificate protection to the web application
+2. setup-and-configure-ssl.md file was created
+#### Implement Password Reset (Forgotten Password)
+1. Checked if the Email ID Entered exists in the database
+2. Set up the AWS Simple Email Service
