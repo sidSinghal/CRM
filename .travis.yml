@@ -62,7 +62,7 @@ after_success:
    - mkdir -p codedeploy
    - zip -r neu-csye6225-Team2-ProjectCRM.zip src appspec.yml || true
    - ls -al
-   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/neu-csye6225-Team2-ProjectCRM.zip || true
+   - mv neu-csye6225-Team2-ProjectCRM.zip codedeploy/ || true
    - ls -al
    - pwd
    - cd codedeploy
