@@ -69,7 +69,6 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 
 ### Assignment 5:
 1.	Created Opportunity View Page
-2.	Created Accounts View Page
 3.	Created Products View Page
 4.	Created Contact View Page
 6.	Created Users View Page
