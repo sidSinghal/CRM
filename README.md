@@ -72,7 +72,6 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 2.	Created Accounts View Page
 3.	Created Products View Page
 4.	Created Contact View Page
-5.	Created Lead View Page
 6.	Created Users View Page
 7.	Created Login Page
 
