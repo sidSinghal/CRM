@@ -26,8 +26,9 @@ script:
   - cd ./src/tests
   - phpunit EmailTest.php
 after_success:
+   - cd ..
    - mkdir -p codedeploy
-   - zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip -i src appspec.yml || true
+   - zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip src appspec.yml || true
    - ls -al
    - mv neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip codedeploy || true
    - ls -al
