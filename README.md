@@ -102,3 +102,8 @@ This is [Travis-CI](https://travis-ci.com/el9sid/neu-csye6225-4 "Travis-Team_2")
 #### Implement Password Reset (Forgotten Password)
 1. Checked if the Email ID Entered exists in the database
 2. Set up the AWS Simple Email Service
+
+### Assignment 9:
+1. Implemented Penetration Testing on the opponent team using penetration testing tools like Kali Linux, Grabber, W3af, etc.
+2. Installed CloudWatch agent on the EC2 instance and shipped the application logs to CloudWatch
+3. Configured the Ubuntu server for UTC timezone
