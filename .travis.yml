@@ -25,9 +25,10 @@ services:
 script:
   - cd ./src/tests
   - phpunit EmailTest.php
+  - cd ..
+  - cd ..
 after_success:
    - mkdir -p codedeploy
-   - cd \
    - pwd
    - ls -al
    - zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip src appspec.yml || true
