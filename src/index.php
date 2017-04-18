@@ -88,7 +88,7 @@ if (isset($_POST['login'])) {
             <div class="row">
                 <div class="col-sm-12">
                     <br/>
-                    <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
+                    <h2 style="padding-left: 270px;">Mavericks CRM !</h2><br/><br/><br/>
                     <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Sign in to start your session</span>
                     <br/><br/>
                     <form class="form floating-label" action="index.php" accept-charset="utf-8" method="post">
