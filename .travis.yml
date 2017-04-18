@@ -29,7 +29,7 @@ after_success:
    - mkdir -p codedeploy
    - zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip src appspec.yml || true
    - ls -al
-   - mv neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip codedeploy/ || true
+   - mv neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip codedeploy/neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip || true
    - ls -al
    - pwd
    - cd codedeploy
@@ -42,13 +42,13 @@ deploy:
    access_key_id: AKIAJHSK4OXYPAU33SIQ
    secret_access_key: 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
    local_dir: codedeploy
-   bucket: code-deployS3.neu-csye6225-spring2017-team-2.com
+   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
    region: us-east-1
    skip_cleanup: true
  - provider: codedeploy
    access_key_id: AKIAJHSK4OXYPAU33SIQ
    secret_access_key: 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
-   bucket: code-deployS3.neu-csye6225-spring2017-team-2.com
+   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
    key: neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip
    bundle_type: zip
    application: Team2Deployment7
