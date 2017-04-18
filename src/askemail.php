@@ -23,6 +23,7 @@ $uid=$_SESSION['uid'];
 $name=$_SESSION['name'];
 $typeid=$_SESSION['typeid'];
 $email=$_SESSION['email'];
+$errornoemailfound="";
 if (isset($_POST['forgotPassword'])) {
     $email = $_POST['email'];
     $q2 = "SELECT * FROM users WHERE email ='$email'";
@@ -31,9 +32,12 @@ if (isset($_POST['forgotPassword'])) {
     $count = mysqli_num_rows($r2);
     if ($count == 1) {
         header('Location: verifycode.php');
+        $errornoemailfound=0;
     } else {
-        echo "<script>alert('The email ID doesnt exist in the application!');
-        window.location.href='askemail.php';</script>";
+        $errornoemailfound=1;
+//        echo "<script>//alert('The email doesnt exist in the application!');
+//        window.location.href='askemail.php?error=1';</script>";
+            $errornoemailfound="The email doesnt exist in the application!";
 //        redirect('askemail.php');
 //        header('Location: askemail.php?error=1');
     }
@@ -86,11 +90,17 @@ if (isset($_POST['forgotPassword'])) {
             <div class="row">
                 <div class="col-sm-12" text_align="center">
                     <br/>
-                    <h2 style="padding-left: 270px;">Mavericks CRM</h2><br/><br/><br/>
-                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 70px;">Please provide an email ID for the password reset code</span>
+                    <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
+                    <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Please provide an email ID on which the reset password code has to be sent</span>
                     <br/><br/>
                     <form class="form floating-label" action="askemail.php" accept-charset="utf-8" method="post">
-
+                        <?PHP
+//                        if($errornoemailfound==1) {
+//                            echo "<p style=\"color: red;\">*The email is not present in the database</p>\n\n";
+//                        }
+                        echo $errornoemailfound;
+//                        ?>
+                        <br/>
                         E-mail Address: <input type="text" name="email" size="50" /> <input type="submit" class="btn btn-primary btn-raised" name="forgotPassword" id="forgotPassword" value=" Request Reset " />
 
                     </form>

@@ -38,11 +38,11 @@ if (isset($_POST['verify'])) {
     $code = sanitizeInput($_POST['code']);
 
     $gencode  = $_SESSION['gencode'];
-    echo $code;
-    echo $gencode;
+//    echo $code;
+//    echo $gencode;
     if ($code==$gencode)
     {
-        echo "<script>alert('The code matches the code sent to you on your ID'.$code.$gencode);</script>";
+//        echo "<script>alert('The code matches the code sent to you on your ID'.$code.$gencode);</script>";
 // window.location.href='passwordreset.php';
 //        redirect('admin/ahm/panel');
         header('Location: passwordreset.php');
@@ -178,7 +178,7 @@ else{
             <div class="row">
                 <div class="col-sm-12">
                     <br/>
-                    <h2 style="padding-left: 270px;">Mavericks CRM</h2><br/><br/><br/>
+                    <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
                     <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;"></span>
                     <br/><br/>
                     <form class="form floating-label" action="verifycode.php" accept-charset="utf-8" method="post">

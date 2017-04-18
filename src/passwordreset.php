@@ -32,6 +32,7 @@ if (isset($_POST['confirm'])) {
     $password2 = sanitizeInput($_POST['confirmpassword']);
 //    echo $password1;
 //    echo $password2;
+    $reseterror="";
     if ($password1==$password2) {
 
         $q2 = "UPDATE users SET password = '$password1' WHERE email ='$email'";
@@ -47,13 +48,15 @@ if (isset($_POST['confirm'])) {
 //            redirect(__Dir__.'index.php');
 //            header('Location: index.php');
         } else {
-            echo "<script>alert('Your password could not be reset... Please Try again!'.$count);
+        $reseterror="Your password could not be reset... Please Try again!"
+            echo "<script>//alert('Your password could not be reset... Please Try again!'.$count);
             window.location.href='passwordreset.php';</script>";
 //            header('Location: passwordreset.php?error=1');
         }
 
     }else {
-        echo "<script>alert('Passwords do not match... Please try again! count=');
+        $reseterror="Your password could not be reset... Please Try again!";
+        echo "<script>//alert('Passwords do not match... Please try again! count=');
         window.location.href='passwordreset.php';</script>";
 //        header('Location: passwordreset.php?error=1');
     }
@@ -106,12 +109,13 @@ if (isset($_POST['confirm'])) {
             <div class="row">
                 <div class="col-sm-12">
                     <br/>
-                    <h2 style="padding-left: 270px;">Mavericks CRM</h2><br/><br/><br/>
+                    <h2 style="padding-left: 270px;">TEST CRM</h2><br/><br/><br/>
                     <span class="text-lg text-primary" style="color : #2B323A; padding-left: 233px;">Please type in the new password:</span>
                     <br/><br/>
                     <form class="form floating-label" action="passwordreset.php" accept-charset="utf-8" method="post">
-
-
+                        <?php
+                        echo $errornoemailfound;
+                        ?>
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" name="password" required>
                             <label for="password">Password</label>
