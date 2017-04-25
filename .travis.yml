@@ -44,7 +44,7 @@ before_deploy:
 deploy:
  - provider: s3
    access_key_id: AKIAJHSK4OXYPAU33SIQ
-   secret_access_key: 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
+   secret_access_key:
     secure: "BppRcmodPp9HJKrhDxOe/a1+mYZMKl/fc6tKN9QAQ0XNyYm8nDD7VPAWsKhDYVejkIuZhKJanuPKTf079B+umy57QKjc3fwJSECFKzWi4w7bPAG9t4u1hK0kvVX1F1r6JqW3wUCCytnFQYb9HIiKGTD2XP6rUtRCFkk7w7jXrD/AhR94SWlqFM4QdF2bnAsfusmr5rfrFhQfPWG9gnCw/SVIk9NlrqOfGXnGESHNmOpW7C2DDN6cOlAaSBiYiTg/MVgLDx/mW7CGlGvXdnuN+JFY/L/tn0pWgX3Y9lsfe8/qUOLBS9IXxzGsMzL2EOetpGyou4DDldAdZftPx8YtYfY5e72mSgrxxVK3/KuuU127WamGuQangHjRKIu/p8lN4hy47/l5YIaC0Xh9zAG9lpavrQT9VQjFs4ntofoF4gI1oXp/ZjcaGBJAOQ061goyvzNxu4DQA9D3iPM/OneALBVvgRU1byeATqBebUKO14bLY6g9GAdfQihe1YI3X1FyAS3wj7M2qFATIBYAjaQXEYduZM9pCkjOE9pT2O+/JYG/5mZBXVLkf9/vnFB7An8dbW8/dM/Mjyow8Mkl3K4xtWA1jRNdTs6rVmgD4Z0EAqaLsX7gH/FgZ6btfCHan+MM3bpzUJhk4LENL/GRvlgelZDIDNNd292pTpRQKQ7Dcj8="
    local_dir: codedeploy
    bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
