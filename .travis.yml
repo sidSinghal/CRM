@@ -1,61 +1,56 @@
-# safelist
 branches:
   only:
   - master
-  
 language: php
-#sudo: required
-#dist: trusty
-#group: edge
 php:
-  - '5.6'
-  - hhvm
-
-#cache:
+- '5.6'
+- hhvm
 directories:
-  - src
+- src
 install:
-  - composer
-before_script: composer require atoum/atoum
-script: vendor/bin/atoum
+- composer
 before_script:
-   - chmod 0777 ./src
-services:
-   - mysql
+- chmod 0777 ./src
 script:
-  - cd ./src/tests
-  - phpunit EmailTest.php
-  - cd ..
-  - cd ..
+- cd ./src/tests
+- phpunit EmailTest.php
+- cd ..
+- cd ..
+services:
+- mysql
 after_success:
-   - mkdir -p codedeploy
-   - pwd
-   - ls -al
-   - zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip src appspec.yml || true
-   - ls -al
-   - mv neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip codedeploy || true
-   - ls -al
-   - pwd
-   - cd codedeploy
-   - ls -al
-   - pwd
+- mkdir -p codedeploy
+- pwd
+- ls -al
+- zip -r neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip src appspec.yml ||
+  true
+- ls -al
+- mv neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip codedeploy || true
+- ls -al
+- pwd
+- cd codedeploy
+- ls -al
+- pwd
 before_deploy:
-   - cd ..
+- cd ..
 deploy:
- - provider: s3
-   access_key_id: AKIAJHSK4OXYPAU33SIQ
-   secret_access_key: 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
-   local_dir: codedeploy
-   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
-   region: us-east-1
-   skip_cleanup: true
- - provider: codedeploy
-   access_key_id: AKIAJHSK4OXYPAU33SIQ
-   secret_access_key: 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
-   bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
-   key: neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip
-   bundle_type: zip
-   application: Team2Deployment7
-   deployment_group: Team2Deployment7group
-   region: us-east-1
-   wait-until-deployed: true
+  matrix:
+  - provider: s3
+    access_key_id: AKIAJHSK4OXYPAU33SIQ
+    secret_access_key:
+      secure: oPCjy202lfvprjiDsk/x6/sn+mgY0s91JWngkY6yna7GKS3w/lSqIFVaIpf6i8ZF8Bp4Vrpl568/GYdpK3+m8ogGFwWXdhZU7ejbU89aUOs17DyTc+hHl6wrkEjTu9m4ZVwW+lNDoZJ4H4v5XcgH44ticXZr9P2bnbpWMQog4kWoxYkKukCRWPUmRrsRgG/zONYPNLNo4A7zEKva2kCYpF+LnM1v6Q/87Ta4hTWW6hr4wGiI0qzGt+Rwwk9Cg1zAUGtVE5xSuWe2upiHz3XFtnzRAkKjtIr5XbWS3dGRThGo98Epqjd/PgxD8gi6ODM9FUw2pwB+MNZPaDR6kiRnhDDStFEyi/xuVhpEe44T/tZOVyuBtfoSXaPAH7KOjwWqA0IuQyu3x8Xc2TU5ZF6yS2AzMUxK9HMtefkDQKfHkxc7gFAakWDCaIHSGf4T3U5BA9d0/C0tedFUzCLPU0dqT1JzG9fVdwmj3xipsqrhgB/rI2gQQEsTnU0p4gp3wFhqiADMFBtLwp2jolWhW5+GZ0mxasAY0QebUECXL4cxARoGG5Dt9j65ZzS+6EHIouwDN4oPfobRlkHLv9Am1AQNF1a3C4DKvYwxwh+oKxgK1ASMtAEIbwwVdgISM6GVSSMc/qhRnBjtOsCO+u6SEXRnXOUA6Yvm5g0M36hOs8q/npI=
+    local_dir: codedeploy
+    bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+    region: us-east-1
+    skip_cleanup: true
+  - provider: codedeploy
+    access_key_id: AKIAJHSK4OXYPAU33SIQ
+    secret_access_key:
+      secure: oPCjy202lfvprjiDsk/x6/sn+mgY0s91JWngkY6yna7GKS3w/lSqIFVaIpf6i8ZF8Bp4Vrpl568/GYdpK3+m8ogGFwWXdhZU7ejbU89aUOs17DyTc+hHl6wrkEjTu9m4ZVwW+lNDoZJ4H4v5XcgH44ticXZr9P2bnbpWMQog4kWoxYkKukCRWPUmRrsRgG/zONYPNLNo4A7zEKva2kCYpF+LnM1v6Q/87Ta4hTWW6hr4wGiI0qzGt+Rwwk9Cg1zAUGtVE5xSuWe2upiHz3XFtnzRAkKjtIr5XbWS3dGRThGo98Epqjd/PgxD8gi6ODM9FUw2pwB+MNZPaDR6kiRnhDDStFEyi/xuVhpEe44T/tZOVyuBtfoSXaPAH7KOjwWqA0IuQyu3x8Xc2TU5ZF6yS2AzMUxK9HMtefkDQKfHkxc7gFAakWDCaIHSGf4T3U5BA9d0/C0tedFUzCLPU0dqT1JzG9fVdwmj3xipsqrhgB/rI2gQQEsTnU0p4gp3wFhqiADMFBtLwp2jolWhW5+GZ0mxasAY0QebUECXL4cxARoGG5Dt9j65ZzS+6EHIouwDN4oPfobRlkHLv9Am1AQNF1a3C4DKvYwxwh+oKxgK1ASMtAEIbwwVdgISM6GVSSMc/qhRnBjtOsCO+u6SEXRnXOUA6Yvm5g0M36hOs8q/npI=
+    bucket: code-deploy2.neu-csye6225-spring2017-team-2.com
+    key: neu-csye6225-Team2-ProjectCRM-${TRAVIS_JOB_NUMBER}.zip
+    bundle_type: zip
+    application: Team2Deployment7
+    deployment_group: Team2Deployment7group
+    region: us-east-1
+    wait-until-deployed: true
