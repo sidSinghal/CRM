@@ -152,7 +152,7 @@ if(isset($_POST['submit']))
                 <div class="col-sm-10">
 <select name="assigned_to" class="form-control" id="assigned_to" required>
 <?php
-$q="SELECT * FROM clients";
+$q="SELECT * FROM users";
 $r=mysqli_query($dbc,$q);
 while($row=mysqli_fetch_array($r))
 {
